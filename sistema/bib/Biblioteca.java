@@ -18,28 +18,33 @@ public class Biblioteca implements Serializable {
     }
 
     public Biblioteca(String arquivoUsuario, String arquivoLivros) throws IOException, ClassNotFoundException {
-        usuarios = new HashMap<>();
-        livros = new HashMap<>();
-        
-        File Fusuarios = new File(arquivoUsuario);
-        File Flivros = new File(arquivoLivros);
+    // 1. Inicia as listas vazias por padrão
+    this.usuarios = new HashMap<>();
+    this.livros = new HashMap<>();
 
-        if (Fusuarios.exists()) {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(Fusuarios));
+    File Fusuarios = new File(arquivoUsuario);
+    File Flivros = new File(arquivoLivros);
+
+    if (Fusuarios.exists()) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(Fusuarios))) {
             this.usuarios = (HashMap<String, Usuario>) ois.readObject();
-            ois.close();
-        } else {
-             throw new FileNotFoundException("Arquivo de usuários não encontrado: " + arquivoUsuario);
+        } catch (Exception e) {
+            System.out.println("Erro ao ler usuários (iniciando vazio): " + e.getMessage());
         }
-
-        if (Flivros.exists()) {
-            ObjectInputStream oil = new ObjectInputStream(new FileInputStream(Flivros));
-            this.livros = (HashMap<Integer, Livro>) oil.readObject();
-            oil.close();
-        } else {
-             throw new FileNotFoundException("Arquivo de livros não encontrado: " + arquivoLivros);
-        }
+    } else {
+        System.out.println("Arquivo de usuários não encontrado. Será criado um novo ao salvar.");
     }
+
+    if (Flivros.exists()) {
+        try (ObjectInputStream oil = new ObjectInputStream(new FileInputStream(Flivros))) {
+            this.livros = (HashMap<Integer, Livro>) oil.readObject(); 
+        } catch (Exception e) {
+            System.out.println("Erro ao ler livros (iniciando vazio): " + e.getMessage());
+        }
+    } else {
+        System.out.println("Arquivo de livros não encontrado. Será criado um novo ao salvar.");
+    }
+}
 
     public HashMap<String, Usuario> getUsuariosMap() { return this.usuarios; }
     public HashMap<Integer, Livro> getLivrosMap() { return this.livros; }

@@ -8,7 +8,7 @@ public class Principal {
             Janela janela = new Janela(biblioteca.getUsuariosMap(), biblioteca.getLivrosMap());
             janela.MenuInicial();
         } catch (Exception e) {
-            e.printStackTrace(); // Isso vai mostrar o erro exato no terminal
+            e.printStackTrace();
             System.out.println("Biblioteca não iniciada: " + e.getMessage());
         }
 
