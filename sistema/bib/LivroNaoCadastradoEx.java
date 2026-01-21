@@ -1,4 +1,4 @@
-package lp2g23.bib;
+package sistema.bib;
 
 public class LivroNaoCadastradoEx extends Exception {
     public LivroNaoCadastradoEx(String msg) {

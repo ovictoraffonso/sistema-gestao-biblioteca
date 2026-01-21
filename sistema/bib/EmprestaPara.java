@@ -1,4 +1,4 @@
-package lp2g23.bib;
+package sistema.bib;
 
 import java.io.Serializable;
 import java.time.LocalDate;

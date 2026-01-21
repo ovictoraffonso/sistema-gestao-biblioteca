@@ -1,4 +1,4 @@
-package lp2g23.bib;
+package sistema.bib;
 
 public class CopiaNaoDisponivelEx extends Exception {
 

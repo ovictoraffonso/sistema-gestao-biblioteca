@@ -3,9 +3,8 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import javax.swing.*;
+import sistema.bib.*;
 import java.awt.*;
-
-import lp2g23.bib.*;
 
 public class Janela {
     private JFrame home = new JFrame();

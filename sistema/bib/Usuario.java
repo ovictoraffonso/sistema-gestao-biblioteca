@@ -1,4 +1,4 @@
-package lp2g23.bib;
+package sistema.bib;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

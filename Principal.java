@@ -1,4 +1,4 @@
-import lp2g23.bib.*;
+import sistema.bib.*;
 
 public class Principal {
     public static void main(String[] args) {

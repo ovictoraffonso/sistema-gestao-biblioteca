@@ -1,4 +1,4 @@
-package lp2g23.bib;
+package sistema.bib;
 
 public class UsuarioNaoCadastradoEx extends Exception {
     public UsuarioNaoCadastradoEx(String msg) {
