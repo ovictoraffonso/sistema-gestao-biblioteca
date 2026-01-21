@@ -13,9 +13,6 @@
 - [x] **Tratamento de exceções:** Sistema robusto com try-catch
 - [x] **Interface gráfica** Menus interativos 
 
-## 🧠 Desafios Técnicos
-[Descreva aqui um problema difícil que você resolveu. Ex: Logica de persistência, tratamento de erro, etc.]
-
 ## 📸 Screenshots
 <img width="784" height="587" alt="image" src="https://github.com/user-attachments/assets/a589b8b0-8e2e-4d8c-8458-909da4dca8c4" />
 
