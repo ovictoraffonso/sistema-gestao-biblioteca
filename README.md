@@ -17,7 +17,7 @@
 <img width="784" height="587" alt="image" src="https://github.com/user-attachments/assets/a589b8b0-8e2e-4d8c-8458-909da4dca8c4" />
 
 ## 🚀 Como Rodar
-1. Clone o repositório:
+1. Cole em sequência o código abaixo
    ```bash
     https://github.com/ovictoraffonso/sistema-gestao-biblioteca.git
     cd sistema-gestao-biblioteca/src
